@@ -1,0 +1,47 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.3.2'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7'
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+
+    }
+    tasks.withType(Javadoc) {
+        options {
+            encoding "UTF-8"
+            charSet 'UTF-8'
+            links "http://docs.oracle.com/javase/7/docs/api"
+        }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+//添加下面的配置以便在 module 中引用
+ext {
+    bintrayRepo = 'maven' //仓库名
+    publishedGroupId = 'com.deemons.dor' //引用时 第一部分
+    libraryDescription = 'android network'//描述
+    siteUrl = 'https://github.com/Deemonser/Download'//项目地址
+    gitUrl = 'https://github.com/Deemonser/Download.git'//gitUrl
+    developerId = 'deemons'//注册的用户名
+    developerName = 'deemonser'//开发者名称
+    developerEmail = 'deemonser@hotmail.com'//开发者邮箱
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}

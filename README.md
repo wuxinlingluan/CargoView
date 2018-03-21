@@ -18,7 +18,7 @@ allprojects {
  >增加依赖
   ```
  dependencies {
-	        compile 'com.github.huangyanbin:SmartTable:1.8.7'
+	        compile 'com.github.wuxinlingluan:GoodShelfView:v1.0'
 	}
  ```
   >使用

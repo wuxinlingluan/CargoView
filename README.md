@@ -21,14 +21,14 @@ allprojects {
  ```
   >使用
    ```
-     <com.github.view.GoodShelfView
+    <com.github.view.CargoView
         android:id="@+id/gf1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
    ```
   >设置货架数据
    ```
-     GoodShelfView gf1 = (GoodShelfView) findViewById(R.id.gf1);//初始化
+     CargoView gf1 = (CargoView) findViewById(R.id.gf1);//初始化
      List<PointBean> pointList1=new ArrayList<>();//集合
      gf1.setGoodsList(pointList1);//设置数据
    ```

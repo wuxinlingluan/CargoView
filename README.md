@@ -16,7 +16,7 @@ allprojects {
  >增加依赖
   ```
  dependencies {
-	        compile 'com.github.wuxinlingluan:GoodShelfView:v1.0'
+	         implementation 'com.github.wuxinlingluan:CargoView:v1.0'
 	}
  ```
   >使用
